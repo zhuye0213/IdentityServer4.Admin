@@ -1,33 +1,33 @@
 ﻿{
-    "Serilog": {
-        "MinimumLevel": {
-            "Default": "Error",
-            "Override": {
-                "Skoruba": "Information"
-            }
-        },
-        "WriteTo": [
-            {
-                "Name": "Console"
-            },
-            {
-                "Name": "File",
-                "Args": {
-                    "path": "Log/skoruba_admin.txt",
-                    "rollingInterval": "Day"
-                }
-            },
-            {
-                "Name": "MSSqlServer",
-                "Args": {
-                    "connectionString": "Server=(localdb)\\mssqllocaldb;Database=IdentityServer4Admin;Trusted_Connection=True;MultipleActiveResultSets=true",
-                    "tableName": "Log",
-                    "columnOptionsSection": {
-                        "addStandardColumns": [ "LogEvent" ],
-                        "removeStandardColumns": [ "Properties" ]
-                    }
-                }
-            }
-        ]
-    }
+  "Serilog": {
+    "MinimumLevel": {
+      "Default": "Debug",
+      "Override": {
+        "Skoruba": "Debug"
+      }
+    },
+    "WriteTo": [
+      {
+        "Name": "Console"
+      },
+      {
+        "Name": "File",
+        "Args": {
+          "path": "Log/ids.txt",
+          "rollingInterval": "Day"
+        }
+      },
+      {
+        "Name": "MSSqlServer",
+        "Args": {
+          "connectionString": "server=192.168.7.231;database=rgsc_idp;user=root;password=Rgscasdzxc@123",
+          "tableName": "Log",
+          "columnOptionsSection": {
+            "addStandardColumns": [ "LogEvent" ],
+            "removeStandardColumns": [ "Properties" ]
+          }
+        }
+      }
+    ]
+  }
 }
