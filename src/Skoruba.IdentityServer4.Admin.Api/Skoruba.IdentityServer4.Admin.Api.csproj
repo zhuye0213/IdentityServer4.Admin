@@ -68,6 +68,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="api.service">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="app.sh">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
